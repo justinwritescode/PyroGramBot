@@ -37,7 +37,7 @@ async def showid(client, message):
                     f"<b>{file_info.message_type}</b>: "
                     f"<code>{file_info.file_id}</code>\n"
                 )
-                d_file_id = FileId.decode(file_id)
+                d_file_id = FileId.decode(file_info.file_id)
                 _id += f"<b>DC ID</b>: <code>{d_file_id.dc_id}</code>\n"
         else:
             _id += f"<b>User ID</b>: <code>{message.from_user.id}</code>\n"
@@ -47,6 +47,6 @@ async def showid(client, message):
                     f"<b>{file_info.message_type}</b>: "
                     f"<code>{file_info.file_id}</code>\n"
                 )
-                d_file_id = FileId.decode(file_id)
+                d_file_id = FileId.decode(file_info.file_id)
                 _id += f"<b>DC ID</b>: <code>{d_file_id.dc_id}</code>\n"
         await message.reply_text(_id, quote=True)
