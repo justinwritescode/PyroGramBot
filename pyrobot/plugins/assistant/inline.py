@@ -462,3 +462,7 @@ async def inline(_, query: InlineQuery):
 #             caption="testing edit message"
 #         )
 #     ))
+
+# @Client.on_managed_bot()
+# async def _(client, mb):
+#     print(mb)
