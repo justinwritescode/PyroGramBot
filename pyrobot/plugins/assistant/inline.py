@@ -268,7 +268,8 @@ async def inline(_, query: InlineQuery):
                         docs.rules,
                         link_preview_options=LinkPreviewOptions(
                             url="https://telegramplayground.github.io/pyrogram/releases/changes-in-this-fork.html",
-                            show_above_text=True
+                            show_above_text=True,
+                            manual=True,
                         )
                     ),
                     thumbnail_url=FIRE_THUMB,
